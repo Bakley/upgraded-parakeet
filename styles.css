@@ -1,0 +1,167 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Lesson content */
+h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    color: #555;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Output Section */
+#output {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    text-align: left;
+    min-height: 100px;
+}
+
+#output:empty {
+    visibility: hidden;
+}
+
+/* Style for the lesson content to mimic Jupyter Notebooks */
+#output h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    color: #2a72b7; /* A soft blue for headers */
+    margin-bottom: 10px;
+}
+
+#output p {
+    font-family: 'Courier New', Courier, monospace; /* Monospace for a code-like feel */
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #333; /* Neutral dark text */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-left: 5px solid #2a72b7; /* Notebook-like indentation */
+    margin-bottom: 20px;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Ensure text formatting is preserved */
+}
+
+.lesson-navigation {
+    margin-top: 20px;
+}
+
+.lesson-navigation button {
+    font-family: 'Arial', sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lesson-navigation button:hover {
+    background-color: #45a049;
+}
+
+.lesson-navigation button:disabled {
+    background-color: #ddd;
+    color: #888;
+    cursor: not-allowed;
+}
+
+#output {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #output {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .lesson-navigation {
+        flex-direction: column;
+    }
+
+    .lesson-navigation button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
